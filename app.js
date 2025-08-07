@@ -30,3 +30,18 @@ function mostrarAmigos() {
     listaAmigos.appendChild(amigoLista);
   }
 }
+
+// funcion para sortear amigos
+function sortearAmigo() {
+  if (amigos.length === 0) {
+    alert("No hay amigos para sortear.");
+  } else {
+    console.log(`Longitud de la lista de amigos: ${amigos.length}`);
+    let indice = Math.floor(Math.random() * amigos.length);
+    console.log(`Índice sorteado: ${indice}`);
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = amigos[indice];
+    console.log(`Amigo sorteado: ${amigos[indice]}`);
+    console.log(`Lista de amigos: ${amigos}`);
+  }
+}
